@@ -1,0 +1,221 @@
+/* =====================
+   GLOBAL
+===================== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+.nav {
+  background: #0f172a;
+  padding: 16px 40px;
+}
+
+.nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   LAYOUT
+===================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =====================
+   PRODUCTS / CARDS
+===================== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 20px;
+}
+
+.product h4 {
+  margin: 15px 0 10px;
+}
+
+.product p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.product img {
+  max-height: 220px;
+  object-fit: contain;
+  margin: auto;
+}
+
+/* =====================
+   PRICE
+===================== */
+.price {
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   INPUTS & SELECT
+===================== */
+select,
+input {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =====================
+   BASKET
+===================== */
+.basket {
+  margin-top: 50px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.basket h3 {
+  margin-bottom: 20px;
+}
+
+/* =====================
+   PAYMENT
+===================== */
+.payment-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pay-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pay-item img {
+  width: 45px;
+}
+
+/* =====================
+   CARD NAME
+===================== */
+.card-name {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-name input {
+  width: 25%;
+}
+
+/* =====================
+   EXPIRE DATE
+===================== */
+.exp-select {
+  width: 90px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+/* =====================
+   BASKET FOOTER
+===================== */
+.basket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.basket-footer div {
+  display: flex;
+  gap: 12px;
+}
+
+.basket-footer button {
+  width: auto;
+  padding: 10px 18px;
+}
+
+/* =====================
+   CONTACT FORM
+===================== */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
