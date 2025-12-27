@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Online Shopping Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="items.html">Items</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h2 class="page-title">Online Shopping Form</h2>
+
+  <!-- PRODUCTS -->
+  <div class="products">
+
+    <!-- iPhone -->
+    <div class="product">
+      <img src="images/1p.jpg">
+      <h4>iPhone 17 Pro Max</h4>
+
+      <div class="price" id="price-iphone">$1200</div>
+
+      <select onchange="updateProductPrice('iphone', this, document.getElementById('price-iphone'))">
+        <option>256GB</option>
+        <option>512GB (+$150)</option>
+        <option>1TB (+$300)</option>
+      </select>
+
+      <input type="number" id="qty-iphone" value="1" min="1">
+
+      <button onclick="addToBasket('iphone', this.previousElementSibling.previousElementSibling, document.getElementById('qty-iphone'))">
+        Add to Basket
+      </button>
+    </div>
+
+    <!-- Watch -->
+    <div class="product">
+      <img src="images/2p.jpg">
+      <h4>Apple Watch</h4>
+
+      <div class="price" id="price-watch">$400</div>
+
+      <select onchange="updateProductPrice('watch', this, document.getElementById('price-watch'))">
+        <option>Aluminum</option>
+        <option>Stainless (+$50)</option>
+        <option>Ultra (+$100)</option>
+      </select>
+
+      <input type="number" id="qty-watch" value="1" min="1">
+
+      <button onclick="addToBasket('watch', this.previousElementSibling.previousElementSibling, document.getElementById('qty-watch'))">
+        Add to Basket
+      </button>
+    </div>
+
+    <!-- AirPods -->
+    <div class="product">
+      <img src="images/3p.jpg">
+      <h4>Apple AirPods</h4>
+
+      <div class="price" id="price-airpods">$180</div>
+
+      <select onchange="updateProductPrice('airpods', this, document.getElementById('price-airpods'))">
+        <option>Standard</option>
+        <option>Wireless (+$40)</option>
+        <option>Pro (+$80)</option>
+      </select>
+
+      <input type="number" id="qty-airpods" value="1" min="1">
+
+      <button onclick="addToBasket('airpods', this.previousElementSibling.previousElementSibling, document.getElementById('qty-airpods'))">
+        Add to Basket
+      </button>
+    </div>
+
+  </div>
+
+  <!-- BASKET -->
+  <div class="basket">
+    <h3>Basket</h3>
+
+    <!-- PAYMENT METHOD -->
+    <div class="payment-row">
+      <label class="pay-item">
+        <input type="radio" name="pay" value="visa">
+        <img src="images/visa.png">
+        <span>Visa</span>
+      </label>
+
+      <label class="pay-item">
+        <input type="radio" name="pay" value="master">
+        <img src="images/mastercard.png">
+        <span>MasterCard</span>
+      </label>
+    </div>
+
+   <!-- CARD NUMBER -->
+<div class="card-name">
+  <input type="text" maxlength="4" oninput="onlyNumbers(this)">
+  <input type="text" maxlength="4" oninput="onlyNumbers(this)">
+  <input type="text" maxlength="4" oninput="onlyNumbers(this)">
+  <input type="text" maxlength="4" oninput="onlyNumbers(this)">
+</div>
+
+    
+
+    <!-- EXPIRY + CVV -->
+    <div>
+      <select id="expMonth" class="exp-select">
+        <option>MM</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+
+      <select id="expYear" class="exp-select">
+        <option>YYYY</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+      </select>
+
+      <input id="cvv" maxlength="3" placeholder="CVV" style="width:80px;">
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="basket-footer">
+      <span>
+        Items: <span id="itemsCount">0</span> |
+        Total: <span id="totalPrice">$0.00</span>
+      </span>
+
+      <div>
+        <button onclick="emptyCart()">Empty Cart</button>
+        <button onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TechStore | Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="items.html">Items</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <h2 class="page-title">Contact Us</h2>
+
+  <p style="text-align:center; margin-bottom:30px;">
+    If you have any questions or comments, feel free to contact us.
+  </p>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form">
+    <form onsubmit="return validateContact()">
+
+      <input
+        type="text"
+        id="firstName"
+        placeholder="First Name">
+
+      <input
+        type="text"
+        id="lastName"
+        placeholder="Last Name">
+
+      <textarea
+        id="message"
+        placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
